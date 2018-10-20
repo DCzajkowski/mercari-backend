@@ -4,13 +4,13 @@
 const Schema = use('Schema')
 
 class UserSchema extends Schema {
-  up () {
+  up() {
     this.create('users', (table) => {
       table.increments()
     })
   }
 
-  down () {
+  down() {
     this.drop('users')
   }
 }

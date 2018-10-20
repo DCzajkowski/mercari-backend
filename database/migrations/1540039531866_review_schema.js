@@ -4,7 +4,7 @@
 const Schema = use('Schema')
 
 class ReviewSchema extends Schema {
-  up () {
+  up() {
     this.create('reviews', (table) => {
       table.increments()
       table.double('rating')
@@ -15,7 +15,7 @@ class ReviewSchema extends Schema {
     })
   }
 
-  down () {
+  down() {
     this.drop('reviews')
   }
 }

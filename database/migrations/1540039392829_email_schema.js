@@ -4,7 +4,7 @@
 const Schema = use('Schema')
 
 class EmailSchema extends Schema {
-  up () {
+  up() {
     this.create('emails', (table) => {
       table.increments()
       table.integer('user_id').unsigned().references('id').inTable('users')
@@ -13,7 +13,7 @@ class EmailSchema extends Schema {
     })
   }
 
-  down () {
+  down() {
     this.drop('emails')
   }
 }
